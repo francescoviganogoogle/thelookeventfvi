@@ -87,10 +87,10 @@ explore: order_items {
     relationship: many_to_one
   }
 
-  join: review_with_comments {
+  join: reviews_with_comments {
     view_label: "Reviews With Comments"
     type: left_outer
-    sql_on: ${order_items.id} = ${review_with_comments.order_item_id} ;;
+    sql_on: ${order_items.id} = ${reviews_with_comments.order_item_id} ;;
     relationship: many_to_one
   }
 

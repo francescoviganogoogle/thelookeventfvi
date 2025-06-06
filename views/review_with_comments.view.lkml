@@ -1,4 +1,4 @@
-view: review_with_comments {
+view: reviews_with_comments {
 
   # # You can specify the table name if it's different from the view name:
   sql_table_name: lookerprivateipfvi.bqml.reviews_with_comments ;;
@@ -17,7 +17,7 @@ view: review_with_comments {
   }
   dimension: reviews_sql_rating {
     label: "Rate"
-    type: number
+    type: string
     sql: ${TABLE}.reviews_sql_rating ;;
   }
   dimension: is_good {
