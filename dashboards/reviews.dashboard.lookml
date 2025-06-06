@@ -55,7 +55,8 @@
     type: looker_bar
     fields: [reviews_with_comments.average_rating, products.brand]
     filters:
-      reviews_with_comments.average_rating: NOT NULL
+      #reviews_with_comments.reviews_sql_rating: "-NULL"
+      reviews_with_comments.reviews_sql_rating_number: NOT NULL
     sorts: [reviews_with_comments.average_rating]
     limit: 20
     column_limit: 50
@@ -158,7 +159,7 @@
     fields: [reviews_with_comments.count, reviews_with_comments.is_good]
     filters:
       reviews_with_comments.count: NOT NULL
-      reviews_with_comments.reviews_sql_rating: NOT NULL
+      reviews_with_comments.reviews_sql_rating_number: NOT NULL
     sorts: [reviews_with_comments.count desc 0]
     limit: 2000
     column_limit: 50
@@ -225,7 +226,7 @@
     pivots: [reviews_with_comments.is_good]
     filters:
       reviews_with_comments.count: NOT NULL
-      reviews_with_comments.reviews_sql_rating: NOT NULL
+      reviews_with_comments.reviews_sql_rating_number: NOT NULL
       order_items.created_date: 6 months
     sorts: [reviews_with_comments.is_good, reviews_with_comments.count desc 0]
     limit: 2000
@@ -293,7 +294,7 @@
     fields: [reviews_with_comments.count, reviews_with_comments.reviews_sql_rating]
     filters:
       order_items.created_date: 6 months
-      reviews_with_comments.reviews_sql_rating: NOT NULL
+      reviews_with_comments.reviews_sql_rating_number: NOT NULL
     sorts: [reviews_with_comments.count desc 0]
     limit: 2000
     column_limit: 50

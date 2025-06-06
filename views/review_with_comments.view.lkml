@@ -9,6 +9,7 @@ view: reviews_with_comments {
   }
   dimension: order_item_id {
     type: number
+    primary_key: yes
     sql: ${TABLE}.order_item_id ;;
   }
   dimension: products_item_name {
@@ -18,18 +19,29 @@ view: reviews_with_comments {
   dimension: reviews_sql_rating {
     label: "Rate"
     type: string
-    sql: ${TABLE}.reviews_sql_rating ;;
+    sql: cast(${TABLE}.reviews_sql_rating as string) ;;
   }
+
+  dimension: reviews_sql_rating_number {
+    hidden: yes
+    label: "Rate"
+    type: number
+    sql: ${TABLE}.reviews_sql_rating  ;;
+  }
+
+
   dimension: is_good {
     type: yesno
-    sql: ${reviews_sql_rating} >3  ;;
+    sql: ${reviews_sql_rating_number} >3  ;;
   }
   measure: average_rating {
+    label: "Average Rating"
     type: average
-    sql: ${reviews_sql_rating} ;;
+    sql: ${reviews_sql_rating_number} ;;
   }
 
   measure: count {
+    label: "Count Comments"
     type: count
     drill_fields: [products_item_name]
   }
