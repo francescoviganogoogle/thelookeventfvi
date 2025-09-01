@@ -12,14 +12,18 @@ view: reviews_with_comments {
     primary_key: yes
     sql: ${TABLE}.order_item_id ;;
   }
+
   dimension: products_item_name {
     type: string
     sql: ${TABLE}.products_item_name ;;
   }
+
   dimension: reviews_sql_rating {
     label: "Rate"
-    type: string
+    type: number
     sql: cast(${TABLE}.reviews_sql_rating as string) ;;
+    #sql: ${TABLE}.reviews_sql_rating  ;;
+
   }
 
   dimension: reviews_sql_rating_number {
