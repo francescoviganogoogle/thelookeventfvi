@@ -1,0 +1,7 @@
+.env
+mcp.sh
+.agents/mcp_config.json
+.vscode/settings.json
+.gemini/settings.json
+.agents/
+oauth_app_registration.json

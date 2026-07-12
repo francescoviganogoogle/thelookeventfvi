@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "lookml-dashboards": {
+      "source": "lkrdev/lookml_skills",
+      "sourceType": "github",
+      "skillPath": "skills/lookml-dashboards/SKILL.md",
+      "computedHash": "17296cae4871f5de1fbdef741efa6f43635c9176e8455dc77b2cb86b1387fcb9"
+    }
+  }
+}
