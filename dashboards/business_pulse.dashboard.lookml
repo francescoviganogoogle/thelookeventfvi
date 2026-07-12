@@ -1,3 +1,4 @@
+
 - dashboard: business_pulse
   title: Business Pulse
   layout: newspaper
