@@ -8,7 +8,7 @@
   elements:
   - title: Best Rated brands
     name: Best Rated brands
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_bar
     fields: [reviews_with_comments.average_rating, products.brand]
@@ -50,7 +50,7 @@
     height: 8
   - title: Worst Rated Brands
     name: Worst Rated Brands
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_bar
     fields: [reviews_with_comments.average_rating, products.brand]
@@ -97,7 +97,7 @@
     height: 8
   - title: Reviews distribution Past 6 months
     name: Reviews distribution Past 6 months
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_pie
     fields: [reviews_with_comments.count, reviews_with_comments.reviews_sql_rating]
@@ -153,7 +153,7 @@
     height: 6
   - title: Submited Reviews
     name: Submited Reviews
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: single_value
     fields: [reviews_with_comments.count, reviews_with_comments.is_good]
@@ -219,7 +219,7 @@
     height: 6
   - title: Good vs Bad Reviews Distribution past 6 months
     name: Good vs Bad Reviews Distribution past 6 months
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_area
     fields: [reviews_with_comments.count, reviews_with_comments.is_good, order_items.created_date]
@@ -288,7 +288,7 @@
     height: 5
   - title: Submitted Reviews distribution Past 6 months
     name: Submitted Reviews distribution Past 6 months
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_pie
     fields: [reviews_with_comments.count, reviews_with_comments.reviews_sql_rating]
@@ -342,7 +342,7 @@
     height: 6
   - title: Latest reviews
     name: Latest reviews
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_grid
     fields: [order_items.created_date, reviews_with_comments.reviews_sql_rating, products.category,
@@ -413,7 +413,7 @@
     height: 6
   - title: Orders with 70%+ chances of a bad review
     name: Orders with 70%+ chances of a bad review
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_column
     fields: [order_items.created_date, order_items.count]
@@ -462,7 +462,7 @@
     height: 6
   - title: Responses per Rate
     name: Responses per Rate
-    model: thelook
+    model: thelookfvi
     explore: order_items
     type: looker_area
     fields: [reviews_with_comments.count, order_items.created_date, reviews_with_comments.reviews_sql_rating]
